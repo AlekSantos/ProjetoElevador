@@ -7,11 +7,11 @@ namespace ProjetoElevador
     {
         static void Main(string[] args)
         {
-            Boolean continuar = true;
-            Console.WriteLine("Bem vindo ao Elevador");
-            Elevador elevadornovo = new Elevador();
-            elevadornovo.Inicializar();
-            while (continuar != false)
+            Boolean continuar = true; //declara uma variavel continuar com valor true
+            Console.WriteLine("Bem vindo ao Elevador"); //Mensagem de inicio
+            Elevador elevadornovo = new Elevador(); //inicia o objeto elevador
+            elevadornovo.Inicializar(); //Inicia os valores do objeto elevadornovo criado
+            while (continuar != false) //criei um loop que enquanto continuar for true,continua a execução do que ta dentro do while.
             {
                
                 Console.WriteLine(@"Escolha uma opção:
@@ -20,30 +20,30 @@ namespace ProjetoElevador
                                       3 - Subir um andar
                                       4 - Descer um andar
                                       5 - Sair
-                          ");
-                string escolhar = Console.ReadLine();
-                Console.Clear();
+                          "); //Escrevemos esse texto na tela mostrando as opçoes
+                string escolhar = Console.ReadLine(); //pegamos esse valor que foi digitado no console pelo usuario
+                Console.Clear(); //limpa o console do usuario
 
-                switch (escolhar)
+                switch (escolhar) // pegamos o valor que foi digitado e fazemos o que a pessoa quis quando escolheu a opçao
                 {
                     case "1":
-                        elevadornovo.Entrar();  
+                        elevadornovo.Entrar();  //entra uma nova pessoa no elevador
                         break;
                     case "2":
-                        elevadornovo.Sair();
+                        elevadornovo.Sair(); //sai uma pessoa do elevador
                         break;
                     case "3":
-                        elevadornovo.Subir();
+                        elevadornovo.Subir(); //sobe um andar com o elevador
                         break;
                     case "4":
-                        elevadornovo.Descer();
+                        elevadornovo.Descer(); //desce um andar com o elevador
                         break;
                     case "5":
-                        continuar = false;
+                        continuar = false; //transforma continuar em false, encerrando assim a condiçao do while
                         break;
 
                     default:
-                        Console.WriteLine("escolha invalida");
+                        Console.WriteLine("escolha invalida");// se a pessoa escolheu uma opçao nao listada aparece esse mensagem
                         break;
 
                 }
